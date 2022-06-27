@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 from telnetlib import LOGOUT
+from dotenv import load_dotenv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,12 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-k-z2gk@2mu405#vguj^s0imq7pekm^7i8@%l-#eh*sodt2d5m1'
+load_dotenv()
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['django1-rh9six.herokuapp.com'] # Heroku plano gratuito
+ALLOWED_HOSTS = ['django1-rh9six.herokuapp.com', '127.0.0.1'] # Heroku plano gratuito
 
 
 # Application definition
