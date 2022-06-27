@@ -1,2 +1,3 @@
 # django1
-projeto basico de django
+Projeto basico de django do curso Programação Web com Python e Django Framework: Essencial da Geek University na Udemy
+
